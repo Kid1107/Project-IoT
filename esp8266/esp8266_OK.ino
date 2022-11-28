@@ -11,23 +11,23 @@ String id;
 String tam;
 
 
-const long utcOffsetInSeconds = 32400;
+const long utcOffsetInSeconds = 32400;          // time tai Nhat
 String minutes;
 String flag="";
 // Define NTP Client to get time
 WiFiUDP ntpUDP;
-NTPClient timeClient(ntpUDP, "pool.ntp.org", utcOffsetInSeconds);
+NTPClient timeClient(ntpUDP, "pool.ntp.org", utcOffsetInSeconds);   //khoi tao bien lay time tu server
 
 
 void setup() 
 {
-  Serial.begin(115200);
-  WiFi.mode(WIFI_STA);
+  Serial.begin(115200);                           //set baudrate 
+  WiFi.mode(WIFI_STA);                            //set esp mode
   delay(10);
   
-  WiFi.begin(ssid, password);
+  WiFi.begin(ssid, password);                     //connect to wifi
   
-  while (WiFi.status() != WL_CONNECTED) {
+  while (WiFi.status() != WL_CONNECTED) {        // wait to conect
     delay(500);
   }
   timeClient.begin();
@@ -40,20 +40,18 @@ void loop()
 {
   WiFiClient client;
 
-  if (!client.connect(host, 80)) 
+  if (!client.connect(host, 80))                //check conect to server
   {
     Serial.println("connection failed");
     return;
   }
-  if (Serial.available() > 0) 
+  if (Serial.available() > 0)                   //read data from arduino
   {
     while (Serial.available() > 0) 
     {
       id = Serial.readString(); 
     }    
   }
-
-  
   if((id!=tam)&&(id!="checkout")&&(id!="checkin"))
   {
     tam=id;
@@ -91,14 +89,4 @@ void loop()
     flag=minutes;
     Serial.println(timeClient.getFormattedDate());
   }
-//  unsigned long timeout = millis();
-//  while (client.available() == 0) 
-//  {
-//    if (millis() - timeout > 5000)
-//    {
-//      Serial.println(">>> Client Timeout !");
-//      client.stop();
-//      return;
-//    }
-//  }
 }
