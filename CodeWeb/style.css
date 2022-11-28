@@ -1,0 +1,152 @@
+@charset "utf-8";
+/* CSS Document */
+* { /* Dieu khien cho tat ca cac the deu co padding va margin bang 0*/
+    margin: 0;
+    padding: 0;
+}
+
+ol, ul { list-style: none; } /*Khong hien thi style cua list*/
+
+img { border: none; vertical-align: top; } /*Set border none cho image*/
+
+.layout 
+{
+	
+	margin: 20px auto; /* Canh giua */
+	width: 1300px; /* Chieu rong */
+}
+.header img
+{
+	width:97.55%;
+	height:180px;
+	margin-left: 16px;
+}
+.navbar.navbar-default ul li a
+{
+	color: #d9534f;
+	font-weight: bold;
+	font-size:18px;
+	margin-left: 50px;
+}
+.home
+{
+	margin-left: 150px;
+}
+
+.col-md-12.gNav
+{
+	margin-top:10px;
+}
+.panel-body.detai h4
+{	
+	font-weight: bold;
+	color:#d9534f;
+ 	text-align:center;
+ 	font-family: "Times New Roman", Times, serif;
+}
+.panel-body.detai p
+{
+	text-align: left;
+	font-style: italic;
+}
+#inputChucvu
+{
+	margin-bottom: 10px;
+}
+#inputTennv
+{
+	margin-bottom: 10px;
+}
+#inputsdt
+{
+	
+	width:200px;
+	display: inline;
+}
+
+#btnthem
+{
+	margin-top:20px;
+	margin-right:10px;
+	margin-left:3px;
+	
+}
+#btnsua
+{
+	margin-top:20px;
+	margin-right:10px;
+}
+
+#btnxoa
+{
+	margin-top:20px;
+}
+
+#btnxuat
+{
+	
+	margin-top:20px;
+	width:100%;
+	
+}
+#btnupdate
+{
+	
+	margin-top:20px;
+	width:100%;
+}
+#btnthoat
+{
+	float: right;
+	
+}
+
+
+.col-md-12.footer
+{
+	border-top: 1px solid #a3a2a3;
+	padding: 10px;
+    clear: both;
+    
+}
+
+.col-md-12.footer div.fLeft 
+{
+    float: left;
+    width: 340px;
+}
+.col-md-12.footer div.fRight
+ {
+    float: right;
+    width: 530px;
+}
+.col-md-12.footer div.fRight ul {
+    text-align: right;
+    margin-bottom: 10px;
+}
+
+.col-md-12.footer div.fRight ul li {
+    display: inline;
+    border-right: solid 1px blue;
+    padding: 0 5px;
+    
+}
+
+.col-md-12.footer div.fRight ul li.last {
+    border-right: none;
+    padding-right: 0;
+}
+
+.col-md-12.footer div.fRight p {
+    text-align: right;
+}
+
+.clear
+{
+	clear: both;
+}
+.hinhnhietdo
+{
+	width:20px;
+	height:5px;
+}
